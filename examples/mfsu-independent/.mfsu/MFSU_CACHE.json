@@ -1,0 +1,98 @@
+{
+  "cacheDependency": {},
+  "moduleGraph": {
+    "roots": [
+      "/Users/colna/WORK/eva/examples/mfsu-independent/mfsu-virtual-entry/default.js"
+    ],
+    "fileModules": {
+      "/Users/colna/WORK/eva/examples/mfsu-independent/src/framer-motion.tsx": {
+        "importedModules": [
+          "framer-motion",
+          "react"
+        ]
+      },
+      "/Users/colna/WORK/eva/examples/mfsu-independent/src/antd.tsx": {
+        "importedModules": [
+          "antd/es/input",
+          "antd/es/date-picker",
+          "antd/es/button",
+          "antd/dist/antd.css",
+          "react"
+        ]
+      },
+      "/Users/colna/WORK/eva/examples/mfsu-independent/src/App.tsx": {
+        "importedModules": [
+          "/Users/colna/WORK/eva/examples/mfsu-independent/src/framer-motion.tsx",
+          "/Users/colna/WORK/eva/examples/mfsu-independent/src/antd.tsx",
+          "react"
+        ]
+      },
+      "/Users/colna/WORK/eva/examples/mfsu-independent/src/index.tsx": {
+        "importedModules": [
+          "react-dom",
+          "react",
+          "/Users/colna/WORK/eva/examples/mfsu-independent/src/App.tsx"
+        ]
+      },
+      "/Users/colna/WORK/eva/examples/mfsu-independent/mfsu-virtual-entry/default.js": {
+        "importedModules": [
+          "/Users/colna/WORK/eva/examples/mfsu-independent/src/index.tsx"
+        ],
+        "isRoot": true
+      }
+    },
+    "depModules": {
+      "react-dom": {
+        "version": "18.3.1"
+      },
+      "react": {
+        "version": "18.3.1"
+      },
+      "framer-motion": {
+        "version": "10.18.0"
+      },
+      "antd/es/input": {
+        "version": "4.24.16"
+      },
+      "antd/es/date-picker": {
+        "version": "4.24.16"
+      },
+      "antd/es/button": {
+        "version": "4.24.16"
+      },
+      "antd/dist/antd.css": {
+        "version": "4.24.16"
+      }
+    },
+    "depSnapshotModules": {
+      "react-dom": {
+        "file": "react-dom",
+        "version": "18.3.1"
+      },
+      "react": {
+        "file": "react",
+        "version": "18.3.1"
+      },
+      "antd/es/input": {
+        "file": "antd/es/input",
+        "version": "4.24.16"
+      },
+      "antd/es/date-picker": {
+        "file": "antd/es/date-picker",
+        "version": "4.24.16"
+      },
+      "antd/es/button": {
+        "file": "antd/es/button",
+        "version": "4.24.16"
+      },
+      "antd/dist/antd.css": {
+        "file": "antd/dist/antd.css",
+        "version": "4.24.16"
+      },
+      "framer-motion": {
+        "file": "framer-motion",
+        "version": "10.18.0"
+      }
+    }
+  }
+}

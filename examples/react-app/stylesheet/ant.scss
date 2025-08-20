@@ -1,0 +1,294 @@
+/**
+ * bitless 的 css reset 会覆盖部分 antd 的样式，此处进行修正
+ * 引入 antd.css 后的其它样式问题，也在此进行修复
+ * 以及其它一些全局公用样式
+ **/
+ @import './variable.scss';
+
+ $title-font-size: 16px;
+ 
+ body {
+   background: $gray-14 !important;
+ }
+ 
+ [class^='ant-'] a[href],
+ [class*='ant-'] a[href] {
+   font-weight: normal;
+   transition: none;
+   color: $blue-6;
+ }
+ 
+ table {
+   line-height: 20px;
+   width: 100%;
+   margin: 0 0 12px;
+   border-spacing: 0;
+   border-collapse: collapse;
+   border-radius: 3px;
+   box-shadow: 0 0 0 1px $gray-5;
+ }
+ 
+ thead {
+   font-size: 13px;
+ }
+ 
+ tbody {
+   font-size: 12px;
+ }
+ 
+ tbody * {
+   font-size: 12px;
+ }
+ 
+ td {
+   padding: 14px 0;
+   background-color: $gray-1;
+ }
+ 
+ th {
+   font-weight: 500;
+   padding: 25px 0;
+   text-align: left;
+   color: $gray-8;
+   border-bottom: 1px solid $gray-2;
+   background-color: rgba($gray-13, 0.02);
+ }
+ 
+ tbody td,
+ thead th {
+   padding-right: 8px;
+   padding-left: 12px;
+   border-left: none;
+ }
+ 
+ .ant-menu-item a {
+   font-weight: normal !important;
+   // color: rgba(0, 0, 0, 0.65) !important;
+ }
+ 
+ [class^='ant-menu-'] a[href] {
+   color: rgba(0, 0, 0, 0.85);
+ }
+ 
+ .ant-pro-sider-menu-logo > a {
+   height: auto;
+ }
+ 
+ .ant-menu-item-selected a,
+ .ant-menu-item-selected a:hover,
+ .ant-menu-item-selected a:visited {
+   color: $blue-base !important;
+ }
+ 
+ .ant-breadcrumb-link a:visited {
+   color: rgba($black, 0.45);
+ }
+ 
+ .ant-pro-sider-menu-logo {
+   padding: 0;
+ }
+ 
+ .ant-layout-content {
+   .Page-Content {
+     padding: 0;
+   }
+ 
+   .Title + .Page-Content {
+     margin-top: 51px;
+   }
+ 
+   .Page > .Title {
+     font-size: $title-font-size;
+     font-weight: 600;
+     position: relative;
+     position: absolute;
+     top: -24px;
+     left: -24px;
+     display: flex;
+     align-items: center;
+     box-sizing: border-box;
+     width: calc(100% + 48px);
+     height: 48px;
+     padding: 16px 24px;
+     color: rgba($black, 0.85);
+     background-color: $gray-1;
+   }
+ }
+ 
+ .ant-layout.ant-layout-has-sider > .ant-layout,
+ .ant-layout.ant-layout-has-sider > .ant-layout-content {
+   overflow-x: visible;
+ }
+ 
+ .ant-table-content table {
+   box-shadow: none;
+ }
+ 
+ .detail-footer-fixed {
+   position: fixed;
+   z-index: 1;
+   bottom: 0;
+   left: 201px;
+   display: inline-flex;
+   align-items: center;
+   justify-content: center;
+   width: calc(100% - 201px);
+   height: 52px;
+   border-top: 1px solid $gray-4;
+   background-color: $gray-1;
+ 
+   & > .ant-form-item {
+     margin-bottom: 0;
+   }
+ }
+ 
+ .ant-layout-sider-collapsed .detail-footer-fixed {
+   width: calc(100% - 80px);
+ }
+ 
+ .ant-pro-table-search {
+   margin-bottom: 24px;
+ 
+   .ant-form-item {
+     padding: 0 12px;
+   }
+ 
+   & > .ant-form-horizontal > .ant-row-start {
+     margin-right: -24px !important;
+   }
+ }
+ 
+ .ant-table-cell {
+   .operate {
+     color: $branding;
+ 
+     span {
+       cursor: pointer;
+     }
+   }
+ }
+ 
+ .ant-table-tbody > tr > td .ant-space .ant-btn-link {
+   padding: 4px 0;
+ }
+ 
+ .ant-pro-sider-logo {
+   padding: 0;
+   background-color: $branding;
+ }
+ 
+ .ant-pro-sider.ant-layout-sider-collapsed .ant-pro-sider-logo {
+   padding: 0;
+ }
+ 
+ .ant-page-header-ghost {
+   padding: 4px 24px;
+ }
+ 
+ .ant-page-header-heading-title {
+   font-size: $title-font-size;
+ }
+ 
+ /**
+ * 菜单样式调整，基于 prolayout 6.4.19 版本
+ * 后续版本升级，如有需要在此修改
+ */
+ .ant-menu-submenu-vertical
+   > .ant-menu-submenu-title
+   .ant-menu-submenu-arrow::before,
+ .ant-menu-submenu-vertical-left
+   > .ant-menu-submenu-title
+   .ant-menu-submenu-arrow::before,
+ .ant-menu-submenu-vertical-right
+   > .ant-menu-submenu-title
+   .ant-menu-submenu-arrow::before,
+ .ant-menu-submenu-inline
+   > .ant-menu-submenu-title
+   .ant-menu-submenu-arrow::before,
+ .ant-menu-submenu-vertical
+   > .ant-menu-submenu-title
+   .ant-menu-submenu-arrow::after,
+ .ant-menu-submenu-vertical-left
+   > .ant-menu-submenu-title
+   .ant-menu-submenu-arrow::after,
+ .ant-menu-submenu-vertical-right
+   > .ant-menu-submenu-title
+   .ant-menu-submenu-arrow::after,
+ .ant-menu-submenu-inline
+   > .ant-menu-submenu-title
+   .ant-menu-submenu-arrow::after {
+   width: 6px;
+   height: 1px;
+ }
+ 
+ .ant-menu-submenu-inline
+   > .ant-menu-submenu-title
+   .ant-menu-submenu-arrow::before {
+   transform: translateX(3px) translateY(-1px) rotate(-45deg);
+ }
+ 
+ .ant-menu-submenu-open.ant-menu-submenu-inline
+   > .ant-menu-submenu-title
+   .ant-menu-submenu-arrow::before {
+   transform: rotate(45deg) translateX(4px) translateY(1px);
+ }
+ 
+ .ant-menu-submenu-open.ant-menu-submenu-inline
+   > .ant-menu-submenu-title
+   .ant-menu-submenu-arrow::after {
+   -webkit-transform: rotate(-45deg) translateX(-2px);
+   transform: rotate(-45deg) translateX(-4px) translateY(1px);
+ }
+ 
+ .ant-menu-vertical .ant-menu-item::after,
+ .ant-menu-vertical-left .ant-menu-item::after,
+ .ant-menu-vertical-right .ant-menu-item::after,
+ .ant-menu-inline .ant-menu-item::after {
+   top: 50%;
+   height: 14px;
+   margin-top: -7px;
+ }
+ 
+ // 菜单调整
+ .page-has-menu-icon {
+   .ant-menu-item .ant-menu-item-icon,
+   .ant-menu-submenu-title .ant-menu-item-icon,
+   .ant-menu-item .anticon,
+   .ant-menu-submenu-title .anticon {
+     min-width: 16px;
+   }
+ 
+   .ant-menu-submenu .ant-menu-item.ant-menu-item-only-child,
+   .ant-menu-submenu
+     .ant-menu-submenu.ant-menu-submenu-inline
+     > .ant-menu-submenu-title {
+     padding-left: 42px !important;
+   }
+ 
+   .ant-menu-submenu
+     .ant-menu-submenu.ant-menu-submenu-inline
+     .ant-menu-item-only-child {
+     padding-left: 54px !important;
+   }
+ }
+ 
+ .ant-pro-page-container-children-content > .ant-spin-spinning {
+   position: relative;
+   left: 50%;
+   transform: translateX(-50%);
+ }
+ 
+ .ant-pro-page-container-children-content .spin-wrap {
+   text-align: center;
+ }
+ 
+ [class^='ant-'] a:hover,
+ [class*='ant-'] a:hover {
+   font-weight: normal;
+   color: $blue-5;
+ }
+ 
+ .ant-menu-item .out-link-icon {
+   margin-left: 5px;
+ }
+ 
