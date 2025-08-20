@@ -2,7 +2,7 @@
 import { Space, Table, Tag } from 'antd'
 import type { ColumnsType } from 'antd/es/table'
 import { Fragment } from 'react'
-import styles from './index.scss'
+import styles from './index.less'
 
 interface DataType {
   key: string
