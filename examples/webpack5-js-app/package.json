@@ -1,0 +1,37 @@
+{
+  "name": "@kfe/monorepo-antd4",
+  "version": "0.0.1",
+  "private": true,
+  "license": "UNLICENSED",
+  "scripts": {
+    "build": "eva build",
+    "start": "eva start",
+    "pre-start": "echo pre-start"
+  },
+  "deployments": [
+    {
+      "type": "static",
+      "mount": "/apps/antd4",
+      "entry": "build",
+      "fallback": "index.html"
+    }
+  ],
+  "homepage": "/apps/education-dev",
+  "browserslist": [
+    ">0.2%",
+    "not dead",
+    "not ie <= 11",
+    "not op_mini all"
+  ],
+  "dependencies": {
+    "@ant-design/pro-layout": "6.38.0",
+    "@ant-design/pro-table": "2.61.7",
+    "humps": "^2.0.1",
+    "antd": "^4.21.1",
+    "moment": "2.29.4",
+    "prop-types": "15.7.2",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "react-json-view": "^1.21.3"
+  }
+}

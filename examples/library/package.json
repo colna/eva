@@ -1,0 +1,15 @@
+{
+  "name": "@kfe/package-example",
+  "version": "0.0.1",
+  "private": true,
+  "license": "UNLICENSED",
+  "scripts": {
+    "build": "neon build"
+  },
+  "publishConfig": {
+    "access": "public"
+  },
+  "dependencies": {
+    "@kfe/eva-neon": "workspace:*"
+  }
+}
